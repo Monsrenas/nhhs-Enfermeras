@@ -7,5 +7,6 @@ return [
     'application' => 'Application Packet',
     'examination' => 'Examination',
     'signin' => 'sign in',
- 
+    'close' => 'Close',
+    
 ];

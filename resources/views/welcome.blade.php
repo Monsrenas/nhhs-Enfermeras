@@ -19,9 +19,11 @@ The above copyright notice and this permission notice shall be included in all c
   display: inline-block: 
   
 }
-  .drop { filter: drop-shadow(0 12px 15px rgba(0, 0, 0, 0.9)); opacity: 60%; }
+  .drop { filter: drop-shadow(0 12px 15px rgba(0, 0, 0, 0.9)); opacity: 80%; }
 .box {   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); }
 .text {   text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); }
+
+ 
 </style>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,6 +37,9 @@ The above copyright notice and this permission notice shall be included in all c
     NHHS
   </title>
   <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
@@ -42,11 +47,12 @@ The above copyright notice and this permission notice shall be included in all c
   <link href="{{asset('assets/css/material-kit.css?v=2.0.7') }}" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="{{asset('assets/demo/demo.css')}}" rel="stylesheet" />
+
 </head>
 
 <body class="index-page sidebar-collapse">
    
-  <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
+  <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav" style="">
     <div class="container">
       <div class="navbar-translate">
         <a class="navbar-brand" href="/"><i class="material-icons">home</i>
@@ -61,7 +67,7 @@ The above copyright notice and this permission notice shall be included in all c
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{url('training_list')}}" class="nav-link">
               <i class="material-icons">apps</i> {{trans('welcome.training')}} 
             </a>
           </li>
@@ -120,21 +126,20 @@ The above copyright notice and this permission notice shall be included in all c
   </div>
   <!-- Classic Modal -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-dialog modal-dialog-centered" role="document" style=" display:table;" >
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Modal title</h5>
+          <h5 class="modal-title"></h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <i class="material-icons">clear</i>
           </button>
         </div>
-        <div class="modal-body">
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
-          </p>
+        <div class="modal-body" id="modal-body">
+           
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-link">Nice Button</button>
-          <button type="button" class="btn btn-danger btn-link" data-dismiss="modal">Close</button>
+          {{--<button type="button" class="btn btn-link">Nice Button</button>--}}
+          <button type="button" class="btn btn-danger btn-link" data-dismiss="modal">{{trans('welcome.close')}}</button>
         </div>
       </div>
     </div>
@@ -166,14 +171,9 @@ The above copyright notice and this permission notice shall be included in all c
   <!--  Google Maps Plugin    -->
   <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
   <script src="{{asset('assets/js/material-kit.js?v=2.0.7')}}" type="text/javascript"></script>
-  <script>
-    $(document).ready(function() {
-      //init DateTimePickers
-      materialKit.initFormExtendedDatetimepickers();
 
-      // Sliders Init
-      materialKit.initSliders();
-    });
+  <script>
+     
 
 
     function scrollToDownload() {

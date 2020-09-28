@@ -7,5 +7,5 @@ return [
     'application' => 'Solicitud',
     'examination' => 'Examen',
     'signin' => 'Ingresar',
- 
+ 	'close' => 'Cerrar',
 ];

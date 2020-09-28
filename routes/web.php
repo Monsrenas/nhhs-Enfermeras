@@ -26,3 +26,5 @@ Route::group(['middleware' => ['web']], function () {
 		    ]);
 
 });
+
+Route::get('training_list','App\Http\Controllers\MaterialController@training_list');
