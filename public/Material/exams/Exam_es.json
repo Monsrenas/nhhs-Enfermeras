@@ -1,0 +1,278 @@
+{ "0": "CONTROL DE INFECCION",
+  "1": {
+    "0": "¿Controles de infección incluyen?",
+    "A": "Guantes. Delantales",
+    "B": "Liquido Antibacteriano",
+    "C": "Todas A y B"
+  },
+  "2": {
+    "0": "¿EPP son las iniciales de?",
+    "B": "Eventos Personales Preparados",
+    "C": "Economía Personal Peruana",
+    "D": "Equipo de Protección Personal"
+  },
+  "3": {
+    "0": "¿Para controlar la propagación de infecciones es mejor?",
+    "A": "Precauciones para el usuario universales",
+    "B": "Pasarle la responsabilidad a otra persona",
+    "C": "Manejar lentes de contacto"
+  },
+  "4": {
+    "0": "¿El vidrio roto se debe recoger con?",
+    "A": "Las manos",
+    "B": "Un sombrero",
+    "C": "Utilizando una petite y escoba"
+  },
+  "5": {
+    "0": "¿Materiales contaminados se deben?",
+    "A": "Dejar en el área de trabajo sin recoger y descontaminar",
+    "B": "Eliminar conforme a los procedimientos de Gestión de Residuos Médicos",
+    "C": "Re-utilizar"
+  },
+  "6": {
+    "0": "¿Selecciona la repuesta apropiada?",
+    "A": "Recoja vidrio row con la mano",
+    "B": "Reutilizar guantes",
+    "C": "Use solo guantes nuevos"
+  },
+  "7": {
+    "0": "¿Objetos puntiagudos o * Blades?",
+    "A": "Deben ser guardados en su bolsillo",
+    "B": "Desechados inmediatamente en un contenedor especial etiquetado 'Biohazard'",
+    "C": "Son usados para disminuir la propagación de infección"
+  },
+  "8": {
+    "0": "¿Si usted ha sido Expuesto. Que debe hacer inmediatamente?",
+    "A": "Lavar el area expuesta con jabon y ague corriente",
+    "B": "Utilizer jabones no abrasivos antibacterial",
+    "C": "Todas A y B"
+  },
+  "9": {
+    "0": "¿Cuándo debe informador si asido expuesto una infección material?",
+    "A": "Lo mos pronto posible",
+    "B": "Nunca",
+    "C": "Después de tres dias"
+  },
+  "10": {
+    "0": "¿Cómo se repona si ha sido expuesto?",
+    "A": "Por telefono",
+    "B": "Por seña1 de humo",
+    "C": "Por escrito en un informe de incidencia"
+  },
+  "11": "ABUSO, NEGLIGENCIA Y EXPLOTACIÓN",
+  "12": {
+    "0": "¿Cuál es la definición de negligencia?",
+    "A": "Fracaso u omisión por parte del cuidador o adulto vulnerable de brindar el cuidado, la supervisión y los servicios necesarios para mantener la salud física y mental de un adulto vulnerable",
+    "B": "Ser capaz de brindar atención a un adulto vulnerable",
+    "C": "Llamar a un médico para informar el estado de un paciente"
+  },
+  "13": {
+    "0": "¿Cuál es la definición de abuso sexual?",
+    "A": "Tener relaciones íntimas con el cónyuge",
+    "B": "Actos de naturaleza sexual cometidos en presencia de un adulto vulnerable sin el consentimiento informado de esa persona",
+    "C": "Llevar a un amigo a tomar un helado"
+  },
+  "14": {
+    "0": "¿Cuál es la definición de adulto vulnerable?",
+    "A": "Un joven de 16 años que sepa conducir",
+    "B": "Un año de 21 que se graduó de la universidad",
+    "C": "Una persona de 18 años de edad o más, cuya capacidad para realizar los ADls normales o para proporcionar su propio cuidado / protección, está disminuida"
+  },
+  "15": {
+    "0": "Definición de explotación:",
+    "A": "Una persona, que se encuentra en una posición de confianza y seguridad con un adulto vulnerable a sabiendas, mediante engaño o intimidación, se beneficia de alguien que no sea el adulto vulnerable",
+    "B": "Una persona que envía cosas fuera del país",
+    "C": "Fuegos artificiales el 4 de julio"
+  },
+  "dieciséis": {
+    "0": "¿Verdadero o falso? Es obligatorio denunciar abuso, negligencia y / o explotación.",
+    "A": "Verdadedor",
+    "B": "Falso"
+  },
+  "17": {
+    "0": "¿Cuáles son las barreras para la identificación de abuso y negligencia?",
+    "A": "La víctima se niega a reconocer el problema",
+    "B": "La víctima se siente demasiado avergonzada o culpable",
+    "C": "La víctima desconoce otras opciones",
+    "D":"Todo lo anterior"
+  },
+  "18": {
+    "0": "¿Es un Estatuto de la Florida, para penalizar a una persona que ha cometido abuso, negligencia o explotación punible con delito menor de segundo grado?",
+    "A": "Sí",
+    "B": "No"
+  },
+  "19": {
+    "0": "Las circunstancias de alto riesgo de abuso, negligencia y explotación incluyen:",
+    "A": "El adulto vulnerable se está volviendo débil y dependiente",
+    "B": "Hay antecedentes familiares de maltrato",
+    "C": "Hay un deseo por la herencia de la persona",
+    "D":"Todo lo anterior"
+  },
+  "20": {
+    "0": "Los indicadores de abuso, negligencia y explotación incluyen:",
+    "A": "Hematomas inexplicables",
+    "B": "Fracturas inexplicables",
+    "C": "Quemaduras inexplicables",
+    "D": "Todo lo anterior"
+  },
+  "21": {
+    "0": "Los indicadores de comportamiento incluyen:",
+    "A": "Agredir a otros",
+    "B": "Amenaza con autolesionarse o suicidarse",
+    "C": "Cambios recientes o repentinos en el comportamiento o las actitudes",
+    "D":"Todo lo anterior"
+  },
+   "22": "NOTIFICACION DE INCIDENTES",
+  "23": {
+    "0": "¿Cual evento requiere atención inmediata?",
+    "A": "Bañar al paciente",
+    "B": "Peinar al paciente",
+    "C": "Una caida del paciente"
+  },
+  "24": {
+    "0": "¿Incidentes incluyen?",
+    "A": "Eventos Adversos",
+    "B": "Eventos Centinelas",
+    "C": "A y B"
+  },
+  "25": {
+    "0": "Ejemplos de Eventos Adversos incluyen:",
+    "A": "Cambios de componamiento abusivo del patient o miembros de la familia",
+    "B": "Admisiones de hospital",
+    "C": "Todas A y B"
+  },
+  "26": {
+    "0": "¿Que clase de evento es una caida del empleado?",
+    "A": "Adverso",
+    "B": "Centinela",
+    "C": "Inesporado"
+  },
+  "27": {
+    "0": "Los Eventos Centinela incluyen:",
+    "A": "Daños graves quo incluyen especificamente la perdida o funcion de una extremidad",
+    "B": "Un evento adverso de catéter grave y urgente que puede dar lugar ha resultado inesperado y no deseado.",
+    "C": "Todas A y B"
+  },
+  "28": {
+    "0": "Ejemplos de Eventos Centinela incluyen:",
+    "A": "La muerte de un paciente causada por el empleado",
+    "B": "Criticas Importantes",
+    "C": "Quejas"
+  },
+  "29": {
+    "0": "¿Qué clase de evento es una queja?",
+    "A": "Adverso",
+    "B": "Centinela",
+    "C": "lnesperado"
+  },
+  "30": {
+    "0": "La parte narrativa del formulario para notificar del incidente debe contener:",
+    "A": "Hechos",
+    "B": "Observaciones directas",
+    "C": "Todas A y B"
+  },
+  "31": {
+    "0": "Eventos Centinela pueden:",
+    "A": "Calificar para ayuda del gobierno",
+    "B": "Empezar a tener variaciones",
+    "C": "Potencialmente disminuir la confianza en la organización"
+  },
+  "32": {
+    "0": "¿Cuando debe reportar un incidente?",
+    "A": "Nunca",
+    "B": "Cuando tenga tiempo",
+    "C": "Inmediatamente después de la identificación del evento"
+  },
+  "33": "TRANSFERENCIAS",
+  "34": {
+    "0": "La mecánica corporal garantiza la seguridad del:",
+    "A": "Paciente",
+    "B": "Miembro del personal",
+    "C": "Equipo",
+    "D": "Tanto A como B"
+  },
+  "35": {
+    "0": "¿Cuál no es un factor importante en las transferencias seguras?",
+    "A": "La seguridad nunca debe verse comprometida",
+    "B": "Seleccione siempre el método de transferencia con facilidad",
+    "C": "En caso de duda, utilice siempre un asistente",
+    "D": "Siempre estabilice el equipo",
+    "E": "Utilice la mecánica corporal adecuada"
+  },
+  "36": {
+    "0": "Nunca considere la dirección de transferencia (de izquierda a derecha o de derecha a izquierda)",
+    "A": "Verdadero",
+    "B": "FALSO"
+  },
+  "37": {
+    "0": "La asistencia moderada se refiere a que el paciente puede realizar al menos una parte de la actividad",
+    "A": "15%",
+    "B": "25%",
+    "C": "50%",
+    "D": "75%"
+  },
+  "38": {
+    "0": "El personal nunca debe discutir el plan de transferencia en presencia del paciente porque trae ansiedad al paciente",
+    "A": "Verdadero",
+    "B": "Falso"
+  },
+"39": "TUBERCULOSIS",
+"40": {
+    "0": "¿Cómo se transmite la tuberculosis?",
+    "A": "De persona a persona a través del aire",
+    "B": "En la playa",
+    "C": "Uso del baño público"},
+
+"41": {
+   "0": "¿A qué parte del cuerpo suele afectar la tuberculosis?",
+   "A": "Pulmones",
+   "B": "Cerebro",
+   "C": "Riñones"},
+
+"42": {
+   "0": "¿Cuál es la diferencia entre TB latente y TB activa?",
+   "A": "Las personas con TB latente tienen los gérmenes en sus cuerpos, pero no están enfermas. Las personas con TB activa están enfermas por los gérmenes de TB que están activos, lo que significa que se están multiplicando y destruyendo tejido en sus cuerpos",
+   "B": "No hay diferencia",
+   "C": "La TB latente se trata médicamente, mientras que la TB activa no se trata médicamente."},
+
+"43": {
+   "0": "¿Puede una persona morir si no recibe tratamiento para la tuberculosis?",
+   "A": "Sí",
+   "B": "No hay diferencia",
+   "C": "No"},
+
+"44": {
+  "0": "¿Qué debo hacer si he estado expuesto a alguien enfermo de tuberculosis?",
+  "A": "Informe a su empleador y vaya al médico para un examen",
+  "B": "No hagas nada",
+  "C": "Debes lavarte las manos"},
+
+"45": {
+  "0": "Después que el médico te haga la prueba de tuberculosis, ¿cuántas horas después tienes que volver para que te examinen el brazo?",
+  "A": "En 24 horas",
+  "B": "No tienes que volver",
+"C": "Dentro de 48 a 72 horas"},
+
+"46": {
+  "0": "¿Cómo se hace la prueba de tuberculosis?",
+  "A": "Prueba cutánea",
+  "B": "Análisis de sangre",
+  "C": "A y B"},
+
+"47": {
+  "0": "¿Para qué sirve el Bacille Calmette-Guerin (BCG)?",
+  "A": "Es para comprobar si tienes diabetes",
+  "B": "Es una vacuna contra la tuberculosis",
+  "C": "Es un análisis de sangre"},
+"48": {
+   "0": "¿Qué puede pasar si no toma los medicamentos indicados para combatir la tuberculosis?",
+   "A": "No pasará nada",
+   "B": "Los microbios pueden sobrevivir y volverse más resistentes al tratamiento",
+   "C": "A y B"},
+
+"49": {
+   "0": "¿Cuándo debe informar un incidente de tuberculosis?",
+   "A": "Nunca",
+   "B": "Cuando tengas tiempo",
+   "C": "Inmediatamente completando un informe de incidente"}
+}

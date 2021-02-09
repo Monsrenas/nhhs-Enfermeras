@@ -1,0 +1,1 @@
+<h2>{{trans('exam.anualexam')}}</h2>

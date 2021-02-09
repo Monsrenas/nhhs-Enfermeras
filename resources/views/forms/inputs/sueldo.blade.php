@@ -1,0 +1,1 @@
+<input type="number" name="rate" value="{{$d["rate"] ??""}}" required>

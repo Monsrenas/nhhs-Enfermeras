@@ -1,0 +1,280 @@
+{
+  "0": "INFECTION CONTROL",
+  "1": {
+    "0": "Are infection controls included?",
+    "A": "Gloves. Aprons",
+    "B": "Antibacterial liquid",
+    "C": "All A and B"
+  },
+  "2": {
+    "0": "EPP are the initials of?",
+    "B": "Prepared Personal Events",
+    "C": "Peruvian Personal Economy",
+    "D": "Personal Protection Team"
+  },
+  "3": {
+    "0": "Is it better to control the spread of infections?",
+    "A": "User precautions universal",
+    "B": "Pass the responsibility to someone else",
+    "C": "Handle contact lenses"
+  },
+  "4": {
+    "0": "Should the broken glass be picked up with?",
+    "A": "The hands",
+    "B": "A hat",
+    "C": "Using a petite and broom"
+  },
+  "5": {
+    "0": "Contaminated Materials are due?",
+    "A": "Leave in the work area without collecting and decontaminate",
+    "B": "Dispose of in accordance with Medical Waste Management procedures",
+    "C": "Re-user"
+  },
+  "6": {
+    "0": "Select the appropriate answer?",
+    "A": "Pick glass row by hand",
+    "B": "Re-use gloves",
+    "C": "Wear only new gloves"
+  },
+  "7": {
+    "0": "Sharp objects or * Blades?",
+    "A": "They should be kept in your pocket",
+    "B": "Discarded immediately in a special container labeled 'Biohazard'",
+    "C": "They are used to reduce the spread of infection"
+  },
+  "8": {
+    "0": "If you have been Exposed, what should you do immediately?",
+    "A": "Wash the exposed area with soap and running water",
+    "B": "Use non-abrasive antibacterial soaps",
+    "C": "All A and B"
+  },
+  "9": {
+    "0": "When should you report if you have been exposed to material infection?",
+    "A": "We will make it possible soon",
+    "B": "Never",
+    "C": "Results of Res days"
+  },
+  "10": {
+    "0": "How do you recover if you have been exposed?",
+    "A": "By phone",
+    "B": "By smoke se6a1",
+    "C": "Written in an incidence report"
+  },
+  "11": "ABUS, NEGLECT. AND EXPLOITATION",
+  "12": {
+    "0": "What Is the definition of neglect?",
+    "A": "Failure or omission on part of the caregiver or vulnerable adult to provide the care, supervision, and services necessary to maintain the physical and mental health of a vulnerable adult.",
+    "B": "Being able to provide care to a vulnerable adult.",
+    "C": "Calling a doctor to report a patient's status."
+  },
+  "13": {
+    "0": "What Is the definition of sexual abuse?",
+    "A": "Having intimate relations with spous",
+    "B": "Acts of sexual nature committed in the presence of a vulnerable adult without that person's informed consent.",
+    "C": "Taking a friend out for Ice cream."
+  },
+  "14": {
+    "0": "What is the definition of a vulnerable adult?",
+    "A": "A 16 year old who can drive",
+    "B": "A 21 year who graduated from college",
+    "C": "A person 18 years of age or older, whose ability to perform the normal ADls, or provide for his own care / protection is impaired"
+  },
+  "fifteen": {
+    "0": "Definition of exploitation:",
+    "A": "A person, who stands in a position of trust and confidence with a vulnerable adult knowingly, by deception or Intimidation, benefits of someone other than the vulnerable adult.",
+    "B": "A person who ships thing out of the country.",
+    "C": "Fireworks on the 4th of July."
+  },
+  "16": {
+    "0": "IS. True or False? It is mandatory to report abuse, neglect, and / or exploitation.",
+    "A": "True",
+    "B": "False"
+  },
+  "17": {
+    "0": "What are the barriers to identification of abuse and neglect?",
+    "A": "Victim refuses to acknowledge the problem.",
+    "B": "Victim feels too embarrassed or guilty.",
+    "C": "Victim is unaware of other options.",
+    "D": "All of the above"
+  },
+  "18": {
+    "0": "Is it a Florida Statutes, to penalize a person who has committed abuse, neglect, or exploitation punishable by misdemeanor of the second degree?",
+    "A": "Yes",
+    "B": "No"
+  },
+  "19": {
+    "0": "High risk circumstances for abuse, neglect, and exploitation include:",
+    "A": "Vulnerable adult is becoming weak and dependent.",
+    "B": "There is a family history of abuse",
+    "C": "There is a desire for the person's inheritanc",
+    "D": "All of the above"
+  },
+  "twenty": {
+    "0": "Indicators of abuse, neglect, and exploitation include:",
+    "A": "Unexplained bruises",
+    "B": "Unexplained fractures",
+    "C": "Unexplained burns",
+    "D": "All of the above"
+  },
+  "twenty-one": {
+    "0": "Behavior Indicators include:",
+    "A": "Assaults others",
+    "B": "Threatens self-harm or suicide",
+    "C": "Recent or sudden changes in behavior or attitudes",
+    "D": "All of the above"
+  },
+   "22": "NOTIFICATION OF INCIDENTS",
+  "2. 3": {
+    "0": "Which event requires immediate attention?",
+    "A": "Bader to the patient",
+    "B": "Comb the patient",
+    "C": "A patient fall"
+  },
+  "24": {
+    "0": "Incidents include?",
+    "A": "Adverse Events",
+    "B": "Sentinel Events",
+    "C": "A y B"
+},
+  "25": {
+    "0": "Examples of Adverse Events include:",
+    "A": "Changes in abusive behavior of patients or family members",
+    "B": "Hospital admissions",
+    "C": "All A and B"
+  },
+  "26": {
+    "0": "What kind of event is an employee fall?",
+    "A": "Adverse",
+    "B": "Sentinel",
+    "C": "Unexpected"
+  },
+  "27": {
+    "0": "Sentinel Events include:",
+    "A": "Serious damage that specifically includes the loss or function of a limb",
+    "B": "A serious and urgent catheter ° adverse event that may result has resulted ° unexpected and unwanted.",
+    "C": "All A and B"
+  },
+  "28": {
+    "0": "Examples of Sentinel Events include:",
+    "A": "The death of a patient caused by the employee",
+    "B": "Important Criticisms",
+    "C": "Complaints"
+  },
+  "29": {
+    "0": "What kind of event is a complaint?",
+    "A": "Adverse",
+    "B": "Sentinel",
+    "C": "unexpected"
+  },
+  "30": {
+    "0": "The narrative part of the form to notify the incident must contain:",
+    "A": "Facts",
+    "B": "Direct observations",
+    "C": "All A and B"
+  },
+  "31": {
+    "0": "Sentinel events can:",
+    "A": "Qualify for government aid",
+    "B": "Start to have variations",
+    "C": "Potentially decrease trust in the organization"
+  },
+  "32": {
+    "0": "When should you report an incident?",
+    "A": "Never",
+    "B": "When I have time",
+    "C": "Immediately after the event identification"
+  },
+  "33": "TRANSFERS",
+  "3. 4": {
+    "0": "Body mechanics ensures the safety of the:",
+    "A": "Patient",
+    "B": "Staff member",
+    "C": "Equipment",
+    "D": "Both A and B"
+  },
+  "35": {
+    "0": "Which is not an important factor in safe transfers?",
+    "A": "Safety must never be compromised",
+    "B": "Always select method of transfer by ease",
+    "C": "When in doubt always use an assistant",
+    "D": "Always stabilize equipment",
+    "E": "Use proper body mechanics"
+  },
+  "36": {
+    "0": "Never consider the direction of transfer (Left to Right or Right to Left).",
+    "A": "TRUE",
+    "B": "FALSE"
+  },
+  "37": {
+    "0": "Moderate assistance refers to the patient being able to perform at least of the activity.",
+    "A": "15%",
+    "B": "25%",
+    "C": "50%",
+    "D": "75%"
+  },
+  "38": {
+    "0": "Staff should never discuss plan of transfer in presents of patient because it brings anxiety to the patient",
+    "A": "TRUE",
+    "B": "FALSE"
+  },
+"39": "TUBERCULOSIS",
+"40": {
+    "0": "How is tuberculosis transmitted?",
+    "A": "From person to person through the air.",
+    "B": "At the beach.",
+    "C": "Using the public restroom"},
+
+"41": {
+   "0": "TB usually affects what part of the body?",
+   "A": "Lungs",
+   "B": "Brain",
+   "C": "Kidneys"},
+
+"42": {
+   "0": "What is the difference between the Latent TB and Active TB infection?",
+   "A": "People with Latent TB have the germs in their bodies, but they are not sick. People with Active TB are sick from TB germs that are active, meaning they are multiplying and destroying tissue in their bodies.",
+   "B": "There is no difference.",
+   "C": "Latent TB is treated medically while Active TB is not treated medically."},
+
+"43": {
+   "0": "Can a person die if they do not get treatment for Tuberculosis?",
+   "A": "Yes",
+   "B": "There is no difference.",
+   "C": "No"},
+
+"44": {
+  "0": "What should I do if I have been exposed to someone ill with tuberculosis?",
+  "A": "Report it to your employer and go to the doctor for an examination",
+  "B": "Don’t do anything",
+  "C": "You must wash you hands"},
+
+"Four. Five":{
+  "0": "Once you have been treated by the doctor, how many hours later do you have to return to have your arm examined?",
+  "A": "Within 24 hours",
+  "B": "You do not have to return",
+"C": "Within 48 to 72 hours"},
+
+"46": {
+  "0": "How do you get tested for TB?",
+  "A": "Skin test",
+  "B": "Blood Test",
+  "C": "A and B"},
+
+"47": {
+  "0": "What is the Bacille Calmette-Guerin (BCG) for?",
+  "A": "Is to check if you have diabetes",
+  "B": "Is a vaccine against TB",
+  "C": "Is a blood test"},
+
+"48": {
+  "0": "What can happen if you don't take medications as indicated to fight TB?",
+  "A": "Nothing will happen.",
+  "B": "The microbes can survive and become more resistant to treatment.",
+  "C": "A and B"},
+
+"49": {
+  "0": "When should you report a TB incident?",
+  "A": "Never",
+  "B": "When you have time",
+  "C": "Immediately by completing an incident report"}
+}

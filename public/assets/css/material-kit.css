@@ -16909,6 +16909,8 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 }
 
 .purple-filter:after {
+
+  /*
   background: rgba(101, 47, 142, 0.64);
   background: linear-gradient(45deg, rgba(101, 47, 142, 0.88) 0%, rgba(125, 46, 185, 0.45) 100%);
   background: -moz-linear-gradient(135deg, rgba(101, 47, 142, 0.88) 0%, rgba(125, 46, 185, 0.45) 100%);
@@ -16917,7 +16919,12 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
   background: rgb(141,200,66, 0.64);
   background: radial-gradient(circle, rgba(141,200,66,1) 0%, rgba(136,255,168,1) 10%);
   background: -moz-linear-gradient(135deg, rgba(141,200,66,0.88) 0%, rgba(136,255,168,0.45) 100%);
-  background: -webkit-linear-gradient(135deg, rgba(141,200,66,0.88) 0%, rgba(136,255,168,0.45) 100%);
+  background: -webkit-linear-gradient(135deg, rgba(141,200,66,0.88) 0%, rgba(136,255,168,0.45) 100%);*/
+
+background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(125,185,232,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#007db9e8',GradientType=0 );
 }
 
 footer {

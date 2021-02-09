@@ -1,0 +1,3 @@
+RewriteCond %{HTTP_HOST} ^www\.neighborhoodhomehealth\.com
+RewriteCond %{HTTP:X-Forwarded-Proto} !^https$
+RewriteRule ^(.*)$ https://neighborhoodhomehealth.com%/{REQUEST_URI} [R=301,L]

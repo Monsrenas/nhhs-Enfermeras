@@ -1,45 +1,39 @@
-<!--
-=========================================================
-Material Kit - v2.0.7
-=========================================================
-
-Product Page: https://www.creative-tim.com/product/material-kit
-Copyright 2020 Creative Tim (https://www.creative-tim.com/)
-
-Coded by Creative Tim
-
-=========================================================
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
-
 <style type="text/css">
-
   img { 
-  margin: 40px; 
-  display: inline-block: 
-  
-}
-  .drop { filter: drop-shadow(0 12px 15px rgba(0, 0, 0, 0.9)); opacity: 80%; }
-.box {   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); }
-.text {   text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); }
+        margin: 40px; 
+        display: inline-block: 
+      }
 
- 
+  .drop { filter: drop-shadow(0 12px 15px rgba(0, 0, 0, 0.9)); opacity: 80%; }
+  .box {   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);   }
+  .text {  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);  }
+
+  .fllwSnt {
+              float: right;
+              padding-left: 10px;  
+              margin-bottom: 0px;
+              padding-bottom: 0px;
+              font-size: 1.2em;
+
+           }
 </style>
+<?php 
+if(!isset($_SESSION)){
+                         session_start();
+                       } 
+$lng=session('lang');                        
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="{{asset('assets/img/apple-icon.png')}}">
   <link rel="icon" type="image/png" href="{{asset('assets/img/favicon.png')}}">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <title>
-    NHHS
-  </title>
+  <title>NHHS</title>
   <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
@@ -47,16 +41,14 @@ The above copyright notice and this permission notice shall be included in all c
   <link href="{{asset('assets/css/material-kit.css?v=2.0.7') }}" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="{{asset('assets/demo/demo.css')}}" rel="stylesheet" />
-
 </head>
-
 <body class="index-page sidebar-collapse">
-   
-  <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav" style="">
+  
+  <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
     <div class="container">
       <div class="navbar-translate">
         <a class="navbar-brand" href="/"><i class="material-icons">home</i>
-         {{trans('welcome.home')}} </a>
+         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="sr-only">Toggle navigation</span>
           <span class="navbar-toggler-icon"></span>
@@ -64,58 +56,127 @@ The above copyright notice and this permission notice shall be included in all c
           <span class="navbar-toggler-icon"></span>
         </button>
       </div>
+
+      <div class="navbar-translate">
+            @if($lng=="es")
+              <a class="navbar-brand" href="{{ url('lang', ['en']) }}" style="font-size: .6em;">
+                <i class="material-icons">language</i>English 
+              </a>
+            @else
+              <a class="navbar-brand" href="{{ url('lang', ['es']) }}" style="font-size: .6em;">
+                <i class="material-icons">language</i>Español 
+              </a>
+            @endif
+            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
+            <a class="nav-link" href="{{url('/forms/1/4/application.Aplication1')}}" onclick="scrollToDownload()">
+              <i class="material-icons">description</i> {{trans('welcome.menuop')[0]}} 
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{url('/forms/5/10/forms.menu')}}">
+              <i class="material-icons">toc</i>{{trans('welcome.menuop')[1]}} 
+            </a>
+          </li>
+                    <li class="nav-item">
             <a href="{{url('training_list')}}" class="nav-link">
-              <i class="material-icons">apps</i> {{trans('welcome.training')}} 
+
+              <i class="material-icons">apps</i> {{trans('welcome.menuop')[2]}} 
             </a>
           </li>
+        
           <li class="nav-item">
-            <a class="nav-link" href="javascript:void(0)" onclick="scrollToDownload()">
-              <i class="material-icons">description</i> {{trans('welcome.application')}} 
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.creative-tim.com/product/material-kit-pro" target="_blank">
-              <i class="material-icons">done_all</i>{{trans('welcome.examination')}} 
+            {{--<a class="nav-link" href="{{url('/exam')}}">--}}
+            <a href="{{url('/contactus')}}" class="nav-link">  
+              <i class="material-icons">send</i>{{trans('welcome.menuop')[3]}}
             </a>
           </li>
 
+          {{--
           <li class="nav-item">
-            <a class="nav-link" href="https://www.creative-tim.com/product/material-kit-pro" target="_blank">
-              <i class="material-icons">how_to_reg</i>{{trans('welcome.signin')}}
-            </a>
-          </li>
-
-          <li class="dropdown nav-item">
-            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-              <i class="material-icons">language</i>
-            </a>
-            <div class="dropdown-menu dropdown-with-icons">
-              <a href="{{ url('lang', ['en']) }}" class="dropdown-item">English
+            @if($lng=="es")
+              <a class="nav-link" href="{{ url('lang', ['en']) }}" style="font-size: .6em">
+                <i class="material-icons">language</i>English 
               </a>
-              <a href="{{ url('lang', ['es']) }}" class="dropdown-item">
-                Español
+            @else
+              <a class="nav-link" href="{{ url('lang', ['es']) }}" style="font-size: .6em">
+                <i class="material-icons">language</i>Español 
               </a>
-            </div>
+            @endif
           </li>
-
+          --}}
+          <br>
+           
+           @if (isset($_SESSION['cliente']))
+            <li class="dropdown nav-item">
+              <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" style="font-size: .6em">
+                <i class="material-icons">how_to_reg</i>{{ $_SESSION['cliente'] }}
+              </a>
+              <div class="dropdown-menu dropdown-with-icons">
+                <a href="javascript:cerrar()" class="dropdown-item">{{trans('welcome.Logout')}}
+                </a>
+              </div>
+            </li>
+          @else
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-target='#myModal' data-toggle='modal' onclick="Modal('autenticacion.login','anc','asd')">
+                <i class="material-icons">how_to_reg</i>{{trans('welcome.signin')}}
+              </a>
+            </li>  
+          @endif
         </ul>
       </div>
     </div>
   </nav>
+
   <div class="page-header header-filter clear-filter purple-filter" data-parallax="true" style="background-image: url('{{URL::asset('assets/img/bg2.jpg') }}');">
     <div class="container">
       <div class="row">
         <div class="col-md-8 ml-auto mr-auto">
           <div class="brand">
-            <img src="{{asset('assets/img/nhhsLogo.png')}}" class="drop">
+            <a href="/">
+            <img style="max-width: 70%; margin: 0 auto; margin-top: -50px;" src="{{asset('assets/img/nhhsLogo.png')}}" class="drop">
             {{--<h1>Material Kit.</h1>
                                     <h3>A Badass Bootstrap 4 UI Kit based on Material Design.</h3>--}}
+            </a>                        
           </div>
         </div>
+                  
       </div>
+
+      <div style="display: inline-block;text-align: center;  width: 100%; margin-top: -20px;">                     
+                      <div style="display: block; margin-bottom: 0px; padding-bottom: 0px;">        
+                              <a class="fllwSnt" rel="tooltip" title="" data-placement="bottom" href="https://twitter.com/NHHS" target="_blank" data-original-title="Follow us on Twitter" rel="nofollow">
+                                <i class="fa fa-twitter" style="color: white; "></i>
+                              </a>
+                     
+                              <a class="fllwSnt" rel="tooltip" title="" data-placement="bottom" href="https://www.facebook.com/NEIGHBORHOOD-HOME-HEALTH-SERVICES-302638734525" target="_blank" data-original-title="Like us on Facebook" rel="nofollow">
+                                <i class="fa fa-facebook-square" style="color: white;"></i>
+                              </a>
+                      
+                              <a class="fllwSnt" rel="tooltip" title="" data-placement="bottom" href="https://www.instagram.com/neighborhood_home_health_svcs/" target="_blank" data-original-title="Follow us on Instagram" rel="nofollow">
+                                <i class="fa fa-instagram" style="color: white;"></i>
+                              </a>
+                              <a class="fllwSnt" rel="tooltip" title="" data-placement="bottom" href="https://www.linkedin.com/company/neighborhood-home-health-services-inc./about/" target="_blank" data-original-title="Follow us on Instagram" rel="nofollow">
+                                <i class="fa fa-linkedin" style="color: white;"></i>
+                              </a>
+                       </div>       
+                       <br>
+                       <div style="display: block; width: 100%; float: right; margin-top: -10px; padding-top: 0px;">
+                              <div style="width: 96px; float: right; font-size: .92em;">Follow NHHS</div>
+                       </div>       
+                  </div>  
+
     </div>
   </div>
   <div class="main main-raised">
@@ -145,19 +206,28 @@ The above copyright notice and this permission notice shall be included in all c
     </div>
   </div>
   <!--  End Modal -->
-  <footer class="footer" data-background-color="black">
-    <div class="container">
-      <nav class="float-left">
-         
-      </nav>
-      <div class="copyright float-right">
-        &copy;
-        <script>
-          document.write(new Date().getFullYear())
-        </script>, made by
-        Monsrenas Soft
+  <footer class="row " data-background-color="black">
+      <div class="col-lg-2">
+        
       </div>
-    </div>
+      <div class="col-lg-8" style="font-weight: bold; font-family: 'Times New Roman', Times, serif;">
+        <p>
+          NEIGHBORHOOD HOME HEALTH SERVICES, INC.  <br> 
+          9110 S.W. 72 ST  <br>
+          MIAMI, FL 33173  <br>
+          TEL: (786) 693-9600 FAX: (305) 305-910-0191  
+        </p>
+        <p style="color: gray;">
+          COPYRIGHT  &copy; 2020 NEIGHBORHOOD HOME HEALTH SERVICES, INC. - ALL RIGHTS RESERVED.  
+        </p>
+      </div>
+      
+       <div  class="col-12 col-lg-2">
+        <a href="https://chapinc.org/">
+        <img src="{{asset('assets/img/chap.png')}}" style="float: right;">
+        </a>
+      </div>
+    
   </footer>
   <!--   Core JS Files   -->
   <script src="{{asset('assets/js/core/jquery.min.js')}}" type="text/javascript"></script>
@@ -171,7 +241,8 @@ The above copyright notice and this permission notice shall be included in all c
   <!--  Google Maps Plugin    -->
   <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
   <script src="{{asset('assets/js/material-kit.js?v=2.0.7')}}" type="text/javascript"></script>
-
+  @include("modal")
+  @include("autenticacion.Funciones_login")
   <script>
      
 
@@ -183,6 +254,8 @@ The above copyright notice and this permission notice shall be included in all c
         }, 1000);
       }
     }
+
+   
   </script>
 </body>
 
