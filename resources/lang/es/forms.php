@@ -13,7 +13,7 @@ return [
     |
     */
     
-    'name' => ['Acuerdo de contratista independiente', 'Anexo de socio comercial', 'Autorización de depósito directo', 'Divulgación de conflicto de intereses', 'Solicitud de ausencia', 'Descripción de puesto / Evaluación de desempeño'],
+    'name' => ['Acuerdo de contratista independiente', 'Anexo de socio comercial', 'Autorización de depósito directo', 'Divulgación de conflicto de intereses', 'Solicitud de ausencia', 'Descripción de puesto / Evaluación de desempeño','CUESTIONARIO DE SELECCIÓN COVID-19'],
      'ifto' => ["Si a Neighborhood Home Health Services, Inc.:","Si al proveedor:"],
      'firmas' => ["NEIGHBORHOOD  HOME HEALTH SERVICES, INC.", "PROVEEDOR","ASOCIADA DE NEGOCIOS"],
      'etiquetasfirma' => ["Firmado", "Impreso", "Título"],
@@ -123,4 +123,9 @@ return [
 'INSERVICESopc'=>'En - servicios que puede completar (Opcional) / Cursos para completar (Opcional)',
 'INSERVICESopcLst'=>['Registros médicos, documentación y aspectos legales', 'Derechos del paciente / Derechos del residente / Derechos del cliente', 'Seguridad del paciente', 'Comunicación con clientes / pacientes con deficiencias cognitivas', 'Prevención y seguridad de errores médicos', 'Habilidad en RCP'],
 
+/*COVID-19 SCREENING QUESTIONNAIRE*/
+'covidIntro'=>'Su salud y bienestar son de suma importancia y estamos tomando medidas para mantener la oficina en un ambiente seguro para los empleados, así como para las personas a nuestro cargo y el público. Por lo tanto, cualquier persona que visite la oficina y/o llene una applicacion de Contratista será examinada y parte de nuestro proceso de evaluación incluirá tomar su temperatura y hacer las siguientes preguntas. ',
+'COVIDQUES'=>['En los últimos 14 días, ¿ha tenido tos que no puede atribuir a otra condición de salud?','En los últimos 14 días, ¿ha tenido dificultad para respirar que no puede atribuir a otra condición de salud?','En los últimos 14 días, ¿ha tenido dolor de garganta que no puede atribuir a otra condición de salud?','En los últimos 14 días, ¿ha tenido nuevos dolores musculares que no puede atribuir a otra condición de salud o una actividad específica como el ejercicio físico?','En los últimos 14 días, ¿ha tenido una temperatura igual o superior a 100,4 ° o la sensación de tener fiebre?','En los últimos 14 días, ¿ha tenido contacto cercano, sin el uso del EPP apropiado, con alguien que actualmente está enfermo con COVID-19 sospechado o confirmado? * (Nota: El contacto cercano se define como dentro de 6 pies por más de 15 minutos'],
+'IfYesToAnswer'=>'If the individual answers YES to any of the questions they will not be allowed into the office or apply to provide services.',
+'covidNote'=>'Wear a surgical mask at entry and at all times while on facility grounds.'
 ];

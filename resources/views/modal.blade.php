@@ -19,7 +19,7 @@ function ModalView($funcion)
                   							}).fail(function() {
       																 console.log('Error en carga de Datos');
   															   });
-}
 
+}
 </script>
 

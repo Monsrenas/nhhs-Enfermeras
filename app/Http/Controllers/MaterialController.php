@@ -262,7 +262,7 @@ class MaterialController extends Controller
                          session_start();
                        } 
          $nombre=$_SESSION['cliente']??"";
-        
+        return;
         Mail::send("Correo" , [], function ($mail) use ($Contenido, $nombre, $user) {
             $mail->subject('Application Pakect '.$user);
             $mail->from('nhhs.users@gmail.com', 'Neighborhood Home Health Services, Inc.');

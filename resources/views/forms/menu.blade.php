@@ -6,7 +6,7 @@
                          }  
 
     $idm=(session('lang'))?(session('lang')):"en"; 
-    $vistas=["forms.covid19_".$idm,"forms.contrato_".$idm, "forms.addendum_".$idm,"forms.deposit","forms.conflict","forms.absence","forms.evaluation"];    
+    $vistas=["forms.contrato_".$idm, "forms.addendum_".$idm,"forms.deposit","forms.conflict","forms.absence","forms.evaluation","forms.covid19"];    
 ?>
   
 	<div class="row">
@@ -67,7 +67,7 @@
      
  @endif     
 	</div>
-
+<hr/>
 <div class="container">
 <form id="ImagendeFirma"> 
    @csrf

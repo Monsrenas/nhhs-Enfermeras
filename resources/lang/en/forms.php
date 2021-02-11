@@ -13,7 +13,7 @@ return [
     |
     */
     
-    'name' => ['Independent Contractor Agreement', 'Business Associate Addendum', 'Direct Deposit authorization', 'Conflit of Interest Disclosure', 'Absence Request', 'Position Description/Performance Evaluation'],
+    'name' => ['Independent Contractor Agreement', 'Business Associate Addendum', 'Direct Deposit authorization', 'Conflit of Interest Disclosure', 'Absence Request', 'Position Description/Performance Evaluation','COVID-19 Screening  Questionnaire'],
     'ifto' =>["If to Neighborhood Home Health Services, Inc.:","If to Provider:"],
     'firmas'=> ["NEIGHBORHOOD  HOME HEALTH SERVICES, INC.","PROVIDER","BUSINESS ASSOCIATE"],
     'etiquetasfirma'=>["Signed","Printed","Title"],
@@ -126,5 +126,9 @@ Legal status (Work Permit, Residency, Citizenship Certificate, Birth Certificate
 'INSERVICESopc'=>' In – services you can complete (Optional) / Cursos para completar (Opcional)',
 'INSERVICESopcLst'=>['Medical RecordsDocumentation and Legal Aspects','PatientRights / ResidentRights / ClientsRights','Patient Safety','Communication with cognitively impaired clients / patients','Medical error prevention and Safety','CPR Skill'],
 
-
+/*COVID-19 SCREENING QUESTIONNAIRE*/
+'covidIntro'=>'Your health and well-being are of the upmost importance and we are taking measures to keep the office a safe environment for employees as well as the individuals under our charge and the public. Therefore, anyone coming into the office or completes an application for Contractor will be screened and part of our screening process will include taking their temperature and asking the following questions.',
+'COVIDQUES'=>['Within the last 14-days, have you experienced a new cough that you cannot attribute to another health condition?','Within the last 14-days, have you experienced new shortness of breath that you cannot attribute to another health condition?','Within the last 14-days, have you experienced a new sore throat that you cannot attribute to another health condition? ','Within the last 14-days, have you experienced new muscle aches that you cannot attribute to another health condition or a specific activity such as physical exercise?','within the last 14-days, have you had a temperature at or above 100.4° or the sense of having a fever?','Within the last 14 days, have you had close contact, without the use of appropriate PPE, with someone who is currently sick with suspected or confirmed COVID-19?* (Note: Close contact is defined as within 6 feet for more than 15 consecutive minutes)'],
+'IfYesToAnswer'=>'If the individual answers YES to any of the questions they will not be allowed into the office or apply to provide services.',
+'covidNote'=>'Wear a surgical mask at entry and at all times while on facility grounds.'
 ];
