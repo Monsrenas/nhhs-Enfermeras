@@ -40,7 +40,7 @@
 	<?php 
 		$signat=['Signature','Date'];
 	?>
-<form  action="javascript: Guardar('pag2')" id="pag2" method="POST" >	
+ 	
   @csrf  
 	<div class="form-group row">
 		<input type="checkbox" name="pag[signature]" id="firmado" required {{($d2['signature']??"")=="on"? "checked":""}}>
@@ -57,58 +57,28 @@
 		@endforeach
 	</div> 		
 
-
+{{-- 
  <div class="card"> 
     <input id="fotoUpl" type="file" style="display:none" name="ImgsTL" accept="image/*">
     <span style="float: right;">{{trans("forms.UploadSignatureImage")}}
                 <button type="button" id="fotofile" class="btn btn-success btn-sm fa fa-folder" ></button>
     </span>
 
-   {{--  
+    <div class="col-3" style="text-align: center;">
+        <span style="float: right;">{{trans("forms.DrawSignature")}}
+        <button type="button" id="trazaFirma" class="btn btn-info btn-sm fa fa-pencil" >
+        </button>
+    </div>
+
+ 
     <div class="card-header"> Galeria de Banners 
                 
               </div><div class="card-body" id="BannerGaleria" style="max-height: 500px; overflow: scroll;"></div> 
-    --}}           
+              
  	</div> 
 	
-
+--}} 
+   
 </div>
 
 
-<button class="fa fa-save btn btn-success"> {{trans('application.save')}}</button>	
-</form>
-
-<script type="text/javascript">
-	
-	$('#fotofile').on('click', function(){
-    	$('#fotoUpl').click();
-  	});
-  
-  // Cuando el autentico cambia hace cambiar al falso
-  	$('input[type=file]').on('change', function(e){
-    	$(this).next().find('input').val($(this).val());
-  	});
-
-
-	$('#fotoUpl').on('change', function(e){ 
-    nombre=$(this).val();
-
-    var miForm=document.getElementById('pag2');   
-
-            var dataFile = new FormData(miForm);
-           
-            $.ajax({ 
-                             url: "/guardaFirma",
-                            type: "post", 
-                        dataType: "html",
-                            data: dataFile,
-                           cache: false,
-                     contentType: false, 
-                     processData: false 
-                                                           
-                  }).done(function(subpage){  
-                            $(".SignatireImg").replaceWith('<img src="data:image/png;base64,'+subpage+'" id="imgFirma">')
-                                            });
-});  
-
-</script>

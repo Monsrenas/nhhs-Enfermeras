@@ -42,7 +42,7 @@ $lng=session('lang');
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="{{asset('assets/demo/demo.css')}}" rel="stylesheet" />
 </head>
-<body class="index-page sidebar-collapse">
+<body class="index-page sidebar-collapse" id="ElTodo">
   
   <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
     <div class="container">
@@ -67,30 +67,24 @@ $lng=session('lang');
                 <i class="material-icons">language</i>Español 
               </a>
             @endif
-            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="navbar-toggler-icon"></span>
-          <span class="navbar-toggler-icon"></span>
-          <span class="navbar-toggler-icon"></span>
-        </button>
       </div>
 
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="{{url('/forms/1/4/application.Aplication1')}}" onclick="scrollToDownload()">
+            <a class="nav-link" href="{{url('/requirements')}}" onclick="scrollToDownload()">
               <i class="material-icons">description</i> {{trans('welcome.menuop')[0]}} 
             </a>
           </li>
-
+          {{--
           <li class="nav-item">
-            <a class="nav-link" href="{{url('/forms/5/11/forms.menu')}}">
+            <a class="nav-link" href="{{url('/forms/1/11/forms.menu')}}">
               <i class="material-icons">toc</i>{{trans('welcome.menuop')[1]}} 
             </a>
           </li>
-                    <li class="nav-item">
+          --}}
+          <li class="nav-item">
             <a href="{{url('training_list')}}" class="nav-link">
-
               <i class="material-icons">apps</i> {{trans('welcome.menuop')[2]}} 
             </a>
           </li>
@@ -123,7 +117,14 @@ $lng=session('lang');
                 <i class="material-icons">how_to_reg</i>{{ $_SESSION['cliente'] }}
               </a>
               <div class="dropdown-menu dropdown-with-icons">
-                <a href="javascript:cerrar()" class="dropdown-item">{{trans('welcome.Logout')}}
+                
+                <a href="#" class="dropdown-item" onclick="javascript: SubeFirma()">{{trans("forms.UploadSignatureImage")}}</a>
+               {{-- <a href="#" class="dropdown-item" id="trazaFirma" data-target='#frmModal' data-toggle='modal'> {{trans("forms.DrawSignature")}}</a>--}}
+                
+             {{--   <a href="#" class="dropdown-item" id="firmar">{{trans("forms.DrawSignature")}}</a> --}}
+
+                <a href="javascript:cerrar()" class="dropdown-item">
+                  <strong>{{trans('welcome.Logout')}}</strong>
                 </a>
               </div>
             </li>
@@ -180,6 +181,7 @@ $lng=session('lang');
     </div>
   </div>
   <div class="main main-raised">
+    @include('mensajes')
     <div class="section section-basic">
       @yield('operaciones') 
     </div>
@@ -196,7 +198,7 @@ $lng=session('lang');
           </button>
         </div>
         <div class="modal-body" id="modal-body">
-           
+ 
         </div>
         <div class="modal-footer">
           {{--<button type="button" class="btn btn-link">Nice Button</button>--}}
@@ -205,7 +207,26 @@ $lng=session('lang');
       </div>
     </div>
   </div>
-  <!--  End Modal -->
+
+  
+ 
+  
+
+
+
+ <form id="ImagendeFirma"> 
+   @csrf
+  <div class="row">
+    <div class="col-3 center"> 
+      <input id="firmaUpl" type="file" style="display:none" name="ImgsTL" accept="image/*" onchange="javascript: subirFirma()">
+    </div>
+    
+    
+  </div> 
+
+ </form>
+
+ 
   <footer class="row " data-background-color="black">
       <div class="col-lg-2">
         
@@ -215,7 +236,7 @@ $lng=session('lang');
           NEIGHBORHOOD HOME HEALTH SERVICES, INC.  <br> 
           9110 S.W. 72 ST  <br>
           MIAMI, FL 33173  <br>
-          TEL: (786) 693-9600 FAX: (305) 305-910-0191  
+          TEL: (786) 693-9600 FAX: (305) 305-910-0191  FirmaTabla
         </p>
         <p style="color: gray;">
           COPYRIGHT  &copy; 2020 NEIGHBORHOOD HOME HEALTH SERVICES, INC. - ALL RIGHTS RESERVED.  
@@ -229,6 +250,8 @@ $lng=session('lang');
       </div>
     
   </footer>
+
+
   <!--   Core JS Files   -->
   <script src="{{asset('assets/js/core/jquery.min.js')}}" type="text/javascript"></script>
   <script src="{{asset('assets/js/core/popper.min.js')}}" type="text/javascript"></script>
@@ -243,9 +266,20 @@ $lng=session('lang');
   <script src="{{asset('assets/js/material-kit.js?v=2.0.7')}}" type="text/javascript"></script>
   @include("modal")
   @include("autenticacion.Funciones_login")
-  <script>
-     
+  @include("La_firma")
 
+  <script>
+     //$('#pad_firma').hide(); 
+    function SubeFirma(){
+      
+        $('#firmaUpl').click();
+    };
+
+      // Cuando el autentico cambia hace cambiar al falso
+    $('input[type=file]').on('change', function(e){
+      console.log("Subido");
+      $(this).next().find('input').val($(this).val());
+    });
 
     function scrollToDownload() {
       if ($('.section-download').length != 0) {
@@ -253,9 +287,34 @@ $lng=session('lang');
           scrollTop: $('.section-download').offset().top
         }, 1000);
       }
-    }
+    };
 
-   
+    function subirFirma(){ 
+    nombre=$("#firmaUpl").val();
+
+    var miForm=document.getElementById('ImagendeFirma');   
+
+            var dataFile = new FormData(miForm);
+           
+            $.ajax({ 
+                             url: "/guardaFirma",
+                            type: "post", 
+                        dataType: "html",
+                            data: dataFile,
+                           cache: false,
+                     contentType: false, 
+                     processData: false 
+                                                           
+                  }).done(function(subpage){  
+                  //location.href="/forms/5/10/forms.menu";
+                                            });
+    };  
+
+   $('body').on('click','#firmar', function(){
+      console.log('Firmar');
+      $('#FirmaTabla').show();
+   }); 
+    
   </script>
 </body>
 

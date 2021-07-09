@@ -91,7 +91,6 @@ class MaterialController extends Controller
 
    public function Guardar(Request $request)
    {
-    
     if(!isset($_SESSION)){  session_start();  }
 
     if (isset($request->pag)) { $form=$request->pag;}
@@ -136,13 +135,16 @@ class MaterialController extends Controller
     {
 
       $image_parts = explode(";base64,", $request->signed);
-    
+      
+      //$image_parts=base64_encode($image_parts); 
+      //$image_parts=base64_encode($image_parts[1]); 
       if(!isset($_SESSION)){
                          session_start();
                        } 
         $nombre=$_SESSION['cliente']??"";
         $nombre=$nombre.".frm";
         $newJsonString ='{"firma":"'.$image_parts[1].'"}';
+        
 
         \Storage::put("/DB/".$nombre, $newJsonString);
 
@@ -243,12 +245,11 @@ class MaterialController extends Controller
       $user=($d1["first"]??"")." ".($d1["last"]??"");
  
       // share data to view
-     
-  
+      if (in_array($doc,["1","2","4"]) ) $vista=$vista."PDF";
+      
       view()->share($vista, $d);
 
       $pdf = PDF::loadView($vista, $d);
-      
       $pdf->setPaper('letter');
       $this->correo($pdf, $user);
 

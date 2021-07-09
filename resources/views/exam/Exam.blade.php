@@ -22,7 +22,7 @@
     <h2 class="shodow p-9 m-0" style="text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);">{{trans('exam.anualexam')}}</h2>
 
      @if (isset($exa[1]))
-      <button class="btn btn-success" id="enviar">{{trans('application.sendexam')}}</button>
+      <button class="btn btn-success enviar" type="button" id="Xenviar">{{trans('application.sendexam')}}</button>
     @endif
     
   </div>
@@ -85,7 +85,7 @@
     </div>      <!-- End Container -->
     <button class="fa fa-save btn btn-success" style="margin-left: 340px;"> {{trans('application.savepage')}}</button>  
     @if (isset($exa[1]))
-        <button class="btn btn-success" id="enviar">{{trans('application.sendexam')}}</button>
+        <button type="button" class="btn btn-success enviar" id="enviar">{{trans('application.sendexam')}}</button>
     @endif
    </form>
 @endif    
@@ -106,16 +106,19 @@
 
    $.post('/Guardar', data, function(subpage){  
         $('#btGuarda').attr("disabled",true);
-        location.href="/exam";
+        //location.href="/exam";
+        mensaje('{{trans('forms.DocSav')}}');
     });
 }
 
 
-$('body').on('click', '#enviar', function()
+$('body').on('click', '.enviar', function()
   {
+
    $.get('/EnviarExamen', "", function(subpage){  
-         
-        location.href="/exam";
+    
+        //location.href="/exam";
+        mensaje('{{trans('forms.DocSend')}}');
     });
   });
 </script>

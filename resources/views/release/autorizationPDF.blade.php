@@ -56,9 +56,9 @@
 	<p>
 
 		{{trans('application.authorize1')}} 
-		<strong>{{($d4['level']??"")=="1"? "[*]":"[   ]"}}</strong>
+		<strong>{{($d['level']??"")=="1"? "[*]":"[   ]"}}</strong>
 		{{trans('application.authorize2')}} 
-		<strong>{{($d4['level']??"")=="2"? "[*]":"[   ]"}}</strong>
+		<strong>{{($d['level']??"")=="2"? "[*]":"[   ]"}}</strong>
 		{{trans('application.authorize3')}}
 		<br><br>
 		{{trans('application.Pleaseprintlegibly')}}
@@ -67,7 +67,7 @@
 	<tr>
 		@foreach($items as $item)
 			<td width="200">
-				{{$d4[$item]??""}}<br>
+				{{$d[$item]??""}}<br>
 				<span>{{trans('application.'.$item)}}</span>
 			</td>
 		@endforeach	
@@ -79,7 +79,7 @@
 			<p class="col-lg-12 col-sm-6" style="text-align: justify;">
 			<label>{{trans('application.'.$item)}}</label>
 			<br>
-			{{$d4[$item]??""}}
+			{{$d[$item]??""}}
 			<br><br>
 			</p>
 		@endforeach	
@@ -89,14 +89,14 @@
 		<tr>
 			@foreach($bdate as $item)
 			<td width="200">		
-				<label>{{trans('application.'.$item)}}</label>: {{$d4["sig".$item]??""}}
+				<label>{{trans('application.'.$item)}}</label>: {{$d["sig".$item]??""}}
 				 
 			</td>	 
 			@endforeach
 			<td>		
 				 <label>{{trans('application.sex')}}:</label>
-				 {{($d4["sex"]??"")=="1"? trans('application.female'):""}}
-				 {{($d4["sex"]??"")=="2"? trans('application.male'):""}}	
+				 {{($d["sex"]??"")=="1"? trans('application.female'):""}}
+				 {{($d["sex"]??"")=="2"? trans('application.male'):""}}	
 	        </td>      
 		</tr>
 		
@@ -105,7 +105,7 @@
 		<tr>
 			@foreach($bitems as $item)
 			<td width="200">		
-				<label>{{trans('application.'.$item)}}</label>: {{$d4[$item]??""}}
+				<label>{{trans('application.'.$item)}}</label>: {{$d[$item]??""}}
 				 
 			</td>	 
 			@endforeach
@@ -124,7 +124,7 @@
 		        <img src="data:image/png;base64,{{$firma}}" id="imgFirma" width="150" height="60">
 		       </div> 
       		@endif	
-			{{$d4["sig".$item]?? ""}} <br>
+			{{$d["sig".$item]?? ""}} <br>
 			 <label>{{trans('application.'.$item)}}</label>
 		 
 		</td>	 

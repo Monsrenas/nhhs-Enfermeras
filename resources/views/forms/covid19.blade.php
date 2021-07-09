@@ -5,7 +5,7 @@
 	li { padding: 6px; text-align: justify;}
 </style>
 
-<h3 style="text-align: center;">{{trans('forms.name')[6]}}</h3>
+<h3 style="text-align: center;">{{trans('forms.name')[10]}}</h3>
 
 <p style = "text-align: justify;">
 {{trans('forms.covidIntro')}}

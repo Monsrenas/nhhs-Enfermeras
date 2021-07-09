@@ -7,23 +7,19 @@
                        }  
 ?>
   
-	<div class="row">
-    
-		<div class=" text-center col-12">
-        	<h2 class="shodow p-9 m-0" style="text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);">{{trans('welcome.application')}}</h2>
-               @if ((isset($dts[1]["last"]))and(isset($dts[2]["sigDate"]))and(isset($dts[3]["SEVENDAYSAWEEK"]))and(isset($dts[4]["sigSignature"])))
+<div class="row">
+		<div class="text-center col-12">
+      <h2 class="shodow p-9 m-0" style="text-shadow: 0 0 10px rgba(0,0,0,0.7);">{{trans('welcome.application')}}</h2>          
+        @if ((isset($dts[1]["last"]))and(isset($dts[2]["sigDate"]))and(isset($dts[3]["SEVENDAYSAWEEK"]))and(isset($dts[4]["sigSignature"])))
                  <button class="btn btn-success" id="enviar">{{trans('application.sendapp')}}</button>
-              @endif
+        @endif
+    </div>
 
-
-        </div>
 @if (!isset($_SESSION['cliente']))
   <div style="text-align: center; width: 100%"> 
    <h4>{{trans('application.youmustlogin')}}</h4>
   </div> 
 @else 
-
-
         <div class="container" >
                   <!-- Tabs on Plain Card -->
           <div class="card card-nav-tabs card-plain">
@@ -79,36 +75,32 @@
 	 	 </div>
  @endif  
 
- <div class="container">
-@include('signature_pad')
-</div>   
-	</div>
+  <script type="text/javascript">
+  	$('body').on('click', 'a[data-toggle="modal"]', function()
+  	{
+  	    $press=$(this).data("file");
+  	    $('#modal-body').empty().append("<div><iframe src='http://docs.google.com/gview?url="+$press+"&embedded=true' style='width:600px; height:500px;' frameborder='0'></iframe></div>");
+  	});
 
-<script type="text/javascript">
-	$('body').on('click', 'a[data-toggle="modal"]', function()
-	{
-	    $press=$(this).data("file");
-	    $('#modal-body').empty().append("<div><iframe src='http://docs.google.com/gview?url="+$press+"&embedded=true' style='width:600px; height:500px;' frameborder='0'></iframe></div>");
-	});
+    function Guardar(formulario)
+    {
 
-function Guardar(formulario)
-{
+      var data=$('#'+formulario).serialize();
+      var data="_token={{ csrf_token()}}&"+data+"&ext="+formulario;
 
-  var data=$('#'+formulario).serialize();
-  var data="_token={{ csrf_token()}}&"+data+"&ext="+formulario;
+       $.post('/Guardar', data, function(subpage){  
+            //$('.fa-save').attr("disabled",true);
+            //location.href="/forms/1/4/application.Aplication1";
+            mensaje('{{trans('forms.DocSav')}}');
+        });
+    }
 
-   $.post('/Guardar', data, function(subpage){  
-        $('#btGuarda').attr("disabled",true);
-        location.href="/forms/1/4/application.Aplication1";
-    });
-}
-
-$('body').on('click', '#enviar', function()
-  {
-      location.href="/createPDF";
-  });
- 
-
-</script>
+    $('body').on('click', '#enviar', function()
+      {
+          mensaje('{{trans('forms.DocSend')}}');
+          location.href="/createPDF";
+      });
+   
+  </script>
 
 @endsection

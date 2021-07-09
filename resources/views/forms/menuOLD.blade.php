@@ -7,7 +7,7 @@
                          }  
 
     $idm=(session('lang'))?(session('lang')):"en"; 
-    $vistas=["application.application","certifications.certifications","sheet.information","release.autorization","forms.contrato_".$idm, "forms.addendum_".$idm,"forms.deposit","forms.conflict","forms.absence","forms.evaluation","forms.covid19"];    
+    $vistas=["forms.contrato_".$idm, "forms.addendum_".$idm,"forms.deposit","forms.conflict","forms.absence","forms.evaluation","forms.covid19"];    
 ?>
   
 	<div class="row">
@@ -33,9 +33,9 @@
                     <?php $items=trans('forms.name');?>
                     @foreach($items as $key=>$item)
                       <li class="nav-item col-lg-4 col-sm-6 p-1 m-0">
-                        <a class="nav-link text-center" href="#frm{{$key+1}}" data-toggle="tab" style="font-size: .8em;"> 
+                        <a class="nav-link text-center" href="#frm{{$key}}" data-toggle="tab" style="font-size: .8em;"> 
                         	{{$item}}<br>
-                        	<input type="checkbox" name="" @if (isset($dts[$key+1])) checked @endif>
+                        	<input type="checkbox" name="" @if (isset($dts[$key+5])) checked @endif>
                     	  </a>
                       </li>
                     @endforeach
@@ -47,20 +47,15 @@
             <div class="card-body ">
               <div class="tab-content text-center">
                 @foreach($vistas as $llv=>$lmt)
-                  <div class="tab-pane" id="frm{{$llv+1}}">
-                    @if (isset($dts[$llv]))
-                      <a href="{{url('/PDF/'.($llv+1).'/'.$lmt)}}" class="btn btn-success" id="pdf" onclick="javascript:mensaje('{{trans('forms.DocSend')}}');">{{trans('application.sendapp')}} </a>
+                  <div class="tab-pane" id="frm{{$llv}}">
+                    @if (isset($dts[$llv+5]))
+                      <a href="{{url('/PDF/'.($llv+5).'/'.$lmt)}}" class="btn btn-success" id="pdf" onclick="javascript:mensaje('{{trans('forms.DocSend')}}');">{{trans('application.sendapp')}} </a>
                     @endif
 
-                    <form action="javascript: Guardar('{{$llv+1}}','{{$lmt}}')" id="pag{{$llv+1}}" method="POST" >
+                    <form action="javascript: Guardar('{{$llv+5}}','{{$lmt}}')" id="pag{{$llv+5}}" method="POST" >
                        @csrf 
                        <input type="text" name="VistA" value="{{$lmt}}" hidden>
-                       
-                       <?php
-                        $indice='d'.(($llv+1<3)?$llv+1:"");
-                       ?>
-                      
-                      @include($lmt,[$indice => $dts[$llv+1] ??[]])
+                      @include($lmt,['d' => $dts[$llv+5] ??[]])
                       <button class="fa fa-save btn btn-success"> {{trans('forms.saveNDsubmit')}}</button>
                     </form>
                   </div>

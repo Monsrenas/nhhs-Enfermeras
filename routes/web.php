@@ -16,14 +16,13 @@ use Illuminate\Support\Facades\Route;
 //Route::get('/','SignatureController@index');
 //Route::post('/signature','SignatureController@upload')->name('/signature');
 
-
-
-
-
 Route::get('seccionCliente/{email?}', 'MaterialController@seccionCliente');
 Route::get('training_list','MaterialController@training_list')->name('training_list');
 
 /*Route::get('application/{ini}/{fin}/{vis}/','MaterialController@application')->name('application'); */
+Route::get('requirements', function () {
+		    return view('application.requiremens_Doc');
+		});
 
 Route::get('forms/{ini}/{fin}/{vis}/','MaterialController@forms')->name('forms');
 

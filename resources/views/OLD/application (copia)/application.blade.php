@@ -26,7 +26,9 @@
 <?php 
 		$items=['last','first','middle','socialsecurity','address','city','state','zipcode','email', 'telephone', 'cellPhone'];
 ?>
-<div class="container" style="color: blue;">			
+<div class="container" style="color: blue;">
+
+<form action="javascript: Guardar('pag1')" id="pag1" method="POST" >			
 	<div class="form-group row">
 		@foreach($items as $item)
 			<input class="col-3 form-control form-control-sms" id="mpt{{$item}}" type="<?php echo ($item=='email')?'email':'text'; ?>" name="pag[{{$item}}]," value="{{$d1[$item]?? ""}}" placeholder="{{trans('application.'.$item)}}" style="margin-bottom: 20px;" @if ($item<>"middle") required @endif>  
@@ -45,6 +47,8 @@
 	</div>	
 	
 
+	
+	 
 <?php $items=['english','HHA','CNA' ]; ?>
 	<div class="form-group row"> 
 		@foreach ($items as $item)
@@ -331,8 +335,7 @@
 		</p>
 
 	</div>
-	<?php 	$ciclo=isset($d1["Employer"])?count($d1["Employer"])-1:1;		?>
-
+	<?php $ciclo=isset($d1["Employer"])?count($d1["Employer"]):1 ?>
 	<div id="trabajo">
 		@for ($i = 0; $i < $ciclo ; $i++)
 			<div>	
@@ -340,7 +343,8 @@
 			</div>	
 		@endfor
 	</div>
-	
+	<button class="fa fa-save btn btn-success"> {{trans('application.save')}}</button>	
+</form>	
 
 </div>{{-- Fin de CONTAINER --}}
 
@@ -353,7 +357,7 @@
 
 $('body').on('click', '#addTrabajo', function()
       {
-           console.log('Trabajo adicionado');
+           
            no=$(".yesno").length+1;      
             $.get('/AddJob', "indice="+no, function(subpage){ 
               $("#trabajo").append(subpage);

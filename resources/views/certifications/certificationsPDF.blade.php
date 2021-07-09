@@ -29,10 +29,16 @@
 <?php
     $firma=$frm['firma']??"";
 ?>
+ 
+<table>
+	<tr>
+		<td><img style="max-width: 100px;" src="./assets/img/nhhsLogo.jpg"></td>
+		<td style="text-align: center;" width="400">
+			<h3>Neighborhood Home Health Services, Inc. <br>{{trans('application.CERTIFICATIONS')}}</h3>
+		</td>		
+	</tr>
+</table>
 
-<div class="cabeza">
-		<h3>{{trans('application.CERTIFICATIONS')}}</h3>
-</div>
 <div class="container" style="text-align: justify; width: 100%">
 	<ul class="list-group">
 	  <li class="list-group-item">{{trans('application.IcertifyInformation')}}</li>
@@ -56,7 +62,7 @@
 		       </div> 
       		@endif
   
-			{{$d2["sig".$item]?? ""}} <br>
+			{{$d["sig".$item]?? ""}} <br>
 			 <label>{{trans('application.'.$item)}}</label>
 		 
 		</td>	 

@@ -13,15 +13,21 @@ return [
     |
     */
     
-    'name' => ['Independent Contractor Agreement', 'Business Associate Addendum', 'Direct Deposit authorization', 'Conflit of Interest Disclosure', 'Absence Request', 'Position Description/Performance Evaluation','COVID-19 Screening  Questionnaire'],
+    'name' => ["INDEPENDENT CONTRACTOR'S APPLICATION",'CERTIFICATIONS','MATCHING INFORMATION SHEET','INFORMATION RELEASE AUTHORIZATION','Independent Contractor Agreement', 'Business Associate Addendum', 'Direct Deposit authorization', 'Conflit of Interest Disclosure', 'Absence Request', 'Position Description/Performance Evaluation','COVID-19 Screening  Questionnaire'],
     'ifto' =>["If to Neighborhood Home Health Services, Inc.:","If to Provider:"],
     'firmas'=> ["NEIGHBORHOOD  HOME HEALTH SERVICES, INC.","PROVIDER","BUSINESS ASSOCIATE"],
     'etiquetasfirma'=>["Signed","Printed","Title"],
     'addendumfirma'=>["by","Signed","Printed","Title"],
     'save' =>"Save this form",
+    'saveNDsubmit' =>"save and submit this form",
     'UploadSignatureImage'=>'Upload signature image',
     'DrawSignature'=>'Draw signature',
-
+    'clsWin'=>'Close',
+    'clsSig'=>'Clear signature',
+    'svsSig'=>'Save signature',
+    'DocSavSend'=>'Document saved and sent',
+    'DocSav'=>'Document saved',
+    'DocSend'=>'Document sent',
     /* Authorization for Direct Deposit */
     'Authorization'=> "Authorization for Direct Deposit",
     'This_authorizes'=>'This authorizes    Neighborhood Home Health Services, Inc. (the "Company") to send credit entries (and appropriate debit and adjustment entries), electronically or by any other commercially accepted method, to my (our) account(s) indicated below and to other accounts (we) identify in the future (the "Account"). This authorizes the financial institution holding the Account to post all such entries.',

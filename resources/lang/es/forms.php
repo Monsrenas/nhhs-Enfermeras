@@ -13,14 +13,23 @@ return [
     |
     */
     
-    'name' => ['Acuerdo de contratista independiente', 'Anexo de socio comercial', 'Autorización de depósito directo', 'Divulgación de conflicto de intereses', 'Solicitud de ausencia', 'Descripción de puesto / Evaluación de desempeño','CUESTIONARIO DE SELECCIÓN COVID-19'],
+    'name' => ["SOLICITUD DE CONTRATISTA INDEPENDIENTE", 'CERTIFICACIONES', 'HOJA DE INFORMACIÓN COMBINADA', 'AUTORIZACIÓN DE LIBERACIÓN DE INFORMACIÓN', 'Acuerdo de contratista independiente', 'Anexo de socio comercial', 'Autorización de depósito directo', 'Divulgación de conflicto de intereses', 'Ausencia Solicitud ','Descripción del puesto/Evaluación del desempeño','Cuestionario de detección COVID-19'],
+
      'ifto' => ["Si a Neighborhood Home Health Services, Inc.:","Si al proveedor:"],
      'firmas' => ["NEIGHBORHOOD  HOME HEALTH SERVICES, INC.", "PROVEEDOR","ASOCIADA DE NEGOCIOS"],
      'etiquetasfirma' => ["Firmado", "Impreso", "Título"],
      'addendumfirma'=>["Por","Firmado","Impreso","Título"],
      'save' =>"Guardar este formulario",
+     'saveNDsubmit' =>"guardar y enviar este formulario",
      'UploadSignatureImage'=>'Subir imagen de firma',
      'DrawSignature'=>'Dibujar firma',
+     'clsWin'=>'Cerrar',
+     'clsSig'=>'Limpiar firma',
+     'svsSig'=>'Guardar firma',
+     'DocSavSend' => 'Documento guardado y enviado',
+     'DocSav' => 'Documento guardado',
+     'DocSend' => 'Documento enviado',
+
      /* Autorización para depósito directo */
     'Authorization' => "Autorización para depósito directo",
     'This_authorizes' => 'Esto autoriza a Neighborhood Home Health Services, Inc. (la "Compañía") a enviar entradas de crédito (y entradas de débito y ajuste apropiadas), electrónicamente o por cualquier otro método comercialmente aceptado, a mi (nuestra) cuenta ( s) que se indican a continuación ya otras cuentas (que identificamos) en el futuro (la "Cuenta"). Esto autoriza a la institución financiera titular de la Cuenta a contabilizar todas esas entradas. ',

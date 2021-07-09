@@ -34,7 +34,7 @@ return [
 
     'Company2'=> "Thank you for visiting our Internet site. As an up-to-date business, we want to give you the opportunity to stay in touch with our company and our services.",
  
-    'Company3'=> "Please feel to can contact us at our e-mail address: questions@neighborhoodhomehealth.com.",
+    'Company3'=> "Please feel to can contact us at our e-mail address: admin@neighborhoodhomehealth.com.",
 
     'INDIVIDUAL'=> 'INDIVIDUAL PROFESSIONAL CARE BY CERTIFIED PERSONNEL',
 
@@ -59,7 +59,7 @@ return [
      
     'DELIVERING1'=> "The most important aspect of our business is our customers and their families. Our management team, whose background consists of over 30 years of experience in the development and management of clinical, administrative, and in-the-field patient services, serves to complement our organization. Our corporate office is in the Kendall area of Miami, Florida.",
 
-    'DELIVERING2'=> "To request information about our services, please email mgmt@neighborhoodhomehealth.com",
+    'DELIVERING2'=> "To request information about our services, please email admin@neighborhoodhomehealth.com",
      
     
     'NEIGHBORHOOD'=> "NEIGHBORHOOD HOME HEALTH SERVICES",

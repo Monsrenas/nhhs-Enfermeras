@@ -34,7 +34,7 @@ return [
 
     'Company2' => "Gracias por visitar nuestro sitio de Internet. Como empresa actualizada, queremos brindarle la oportunidad de mantenerse en contacto con nuestra empresa y nuestros servicios.",
  
-    'Company3' => "No dude en ponerse en contacto con nosotros en nuestra dirección de correo electrónico: questions@neighborhoodhomehealth.com.",
+    'Company3' => "No dude en ponerse en contacto con nosotros en nuestra dirección de correo electrónico: admin@neighborhoodhomehealth.com.",
 
     'INDIVIDUAL' => 'CUIDADO PROFESIONAL INDIVIDUAL POR PERSONAL CERTIFICADO',
 
@@ -58,7 +58,7 @@ return [
      
     'DELIVERING1' => "El aspecto más importante de nuestro negocio son nuestros clientes y sus familias. Nuestro equipo directivo, cuya trayectoria consiste en más de 30 años de experiencia en el desarrollo y gestión de pacientes clínicos, administrativos y de campo. servicios, sirve para complementar nuestra organización. Nuestra oficina corporativa se encuentra en el área de Kendall de Miami, Florida. ",
 
-    'DELIVERING2' => "Para solicitar información sobre nuestros servicios, envíe un correo electrónico a mgmt@neighborhoodhomehealth.com",
+    'DELIVERING2' => "Para solicitar información sobre nuestros servicios, envíe un correo electrónico a admin@neighborhoodhomehealth.com",
      
     
     'NEIGHBORHOOD' => "SERVICIOS DE SALUD EN EL HOGAR DEL VECINDARIO",

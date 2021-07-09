@@ -44,7 +44,7 @@
 	<div class="form-group row">
 		@foreach($items as $item)
 			<div style="width: 25%; float: left; font-size: .8em;">
-				<span style="color: gray;">{{trans('application.'.$item)}}:</span>	 {{$d[$item]?? ""}}
+				<span style="color: gray;">{{trans('application.'.$item)}}:</span>	 {{$d1[$item]?? ""}}
 		    </div>  
 			@if (($item=="socialsecurity")or($item=="zipcode"))
 				<br><br>
@@ -52,7 +52,7 @@
 		@endforeach	
 		<br><br>
 		<label class="form-check-label" for="inlineRadio1">{{trans('application.areyouover18')}}:</label>
-		{{($d['areyouover18']??"")==1? trans('application.yes'):trans('application.no') }}
+		{{($d1['areyouover18']??"")==1? trans('application.yes'):trans('application.no') }}
 	</div>	
 	<br><br>
 
@@ -63,7 +63,7 @@
 		@foreach ($items as $item)
 		<div style="width: 25%; float: left;">
 			<label class="form-check-label" for="inlineRadio1">{{trans('application.'.$item )}}: </label>
-			{{ ($d[$item]??"")=="1"? trans('application.yes'):trans('application.no') }}
+			{{ ($d1[$item]??"")=="1"? trans('application.yes'):trans('application.no') }}
 		</div>
 		@endforeach		
 		<br><br>
@@ -92,9 +92,9 @@
 						<label class="form-check-label">{{trans('application.'.$item)}}</label>
 						<div class="form-check form-check-inline">
 							<label class="form-check-label" style="font-size: 0.8em;"> {{trans('application.yes')}}</label>	
-						  	<input type="radio" name="pag[{{$item}}]" id="inlineRadio1" value="1" {{($d[$item]??"")==1? "checked":""}} required>
+						  	<input type="radio" name="pag[{{$item}}]" id="inlineRadio1" value="1" {{($d1[$item]??"")==1? "checked":""}} required>
 							<label  class="" style="font-size: 0.8em;"> {{trans('application.no')}}</label>
-							<input  type="radio" name="pag[{{$item}}]" id="inlineRadio2" value="0" {{($d[$item]??"")==0? "checked":""}} required>
+							<input  type="radio" name="pag[{{$item}}]" id="inlineRadio2" value="0" {{($d1[$item]??"")==0? "checked":""}} required>
 						</div>
 						@endforeach			
 					</td>
@@ -107,7 +107,7 @@
 						</th>
 						@foreach ($days as $day)
 							<td style="padding: 4px; text-align: right;">
-								{{$d[$day.$scope[$i]]??""}}
+								{{$d1[$day.$scope[$i]]??""}}
 							</td>
 						@endforeach
 						
@@ -142,7 +142,7 @@
 		
 		 @foreach ($items as $item)	
 		 <td>  
-		     {{$d[$key.$item]??""}}
+		     {{$d1[$key.$item]??""}}
 		 </td>
 		 @endforeach
 	</tr>
@@ -160,12 +160,12 @@
 			 @for ($i = 1; $i < 4; $i++)
 				
 					<label class="form-check-label" > {{trans('application.'.$tipos[$i] )}}</label>	
-					<input class="" type="radio" name="pag[{{$key}}Ratio]" value="{{$i}}" {{($d[$key."Ratio"]??"")==$i? "checked":""}} @if ($key<>"school") required @endif>		  
+					<input class="" type="radio" name="pag[{{$key}}Ratio]" value="{{$i}}" {{($d1[$key."Ratio"]??"")==$i? "checked":""}} @if ($key<>"school") required @endif>		  
 				
 			 @endfor
 			</td> 
  		<td>		 
-			{{$d[$key."coursestudy"]??""}} <br>
+			{{$d1[$key."coursestudy"]??""}} <br>
 			<span style="color: gray;">{{trans('application.coursestudy')}}</span>
 		</td>	
 	</tr>
@@ -175,15 +175,15 @@
 		<th>{{trans('application.proflicense')}}:</th>
 
 		<td>	
-			{{ $d["proflicensestate"]??""}} <br>
+			{{ $d1["proflicensestate"]??""}} <br>
 			<span style="color: gray;">{{trans('application.state')}}</span>
 		</td>
 		<td>
-			{{$d["proflicenselic"]??""}} <br>
+			{{$d1["proflicenselic"]??""}} <br>
 			<span style="color: gray;">{{trans('application.lic#')}}</span>
 		</td>
 	 	<td>
-			{{$d["proflicenseexpdate"]??""}} <br>
+			{{$d1["proflicenseexpdate"]??""}} <br>
 			<span style="color: gray;">{{trans('application.expdate')}}</span>
 	 	</td>
 	</tr>
@@ -194,10 +194,10 @@
 		<td colspan="4">
 			<span>{{trans('application.'.$key)}}:</span>
 			
-			{{($d[$key]??"")==1? trans('application.yes'):""}}. 
-			{{($d[$key]??"")==0? trans('application.no'):""}}. 	  
+			{{($d1[$key]??"")==1? trans('application.yes'):""}}. 
+			{{($d1[$key]??"")==0? trans('application.no'):""}}. 	  
 			<span>{{trans('application.'.$val)}}</span>	
-			<br><br>{{$d[$val] ?? ""}}		
+			<br><br>{{$d1[$val] ?? ""}}		
 		</td>
 	</tr>
 	
@@ -208,20 +208,20 @@
 			<span>{{trans('application.floridalicense')}}</span>
 			 
 				<label class="" style="font-size: 0.8em;"> {{trans('application.yes')}} </label>	
-				<input class="" type="radio" name="pag[floridalicense]" id="inlineRadio1" value="1" style="font-size: 0.8em;" {{($d["floridalicense"]??"")==1? "checked":""}} required>
+				<input class="" type="radio" name="pag[floridalicense]" id="inlineRadio1" value="1" style="font-size: 0.8em;" {{($d1["floridalicense"]??"")==1? "checked":""}} required>
 					  
 				<label class="" style="font-size: 0.8em;"> {{trans('application.no')}}</label>
-				<input class="" type="radio" name="pag[floridalicense]" id="inlineRadio2" value="0" {{($d["floridalicense"]??"")==0? "checked":""}} required>
+				<input class="" type="radio" name="pag[floridalicense]" id="inlineRadio2" value="0" {{($d1["floridalicense"]??"")==0? "checked":""}} required>
 			 	
 		</td>
 		<td>
-			{{$d["floridalicenselic"]??""}} <br>
+			{{$d1["floridalicenselic"]??""}} <br>
 			
 			<span style="color: gray;">{{trans('application.state')}}</span>
 			
 		</td>
 	 	<td>	 		
-			{{$d["floridalicenseexpdate"]??""}} <br>
+			{{$d1["floridalicenseexpdate"]??""}} <br>
 			<span style="color: gray;">{{trans('application.expdate')}}</span>
 	 	</td>
 	</tr> 	
@@ -232,7 +232,7 @@
 <table>
 	<tr>
 		<td>
-			<span>{{trans('application.drivingviolations')}}:</span> {{$d["drivingviolations"]??""}}
+			<span>{{trans('application.drivingviolations')}}:</span> {{$d1["drivingviolations"]??""}}
 	 	</td>		
 	</tr>
 </table>
@@ -257,12 +257,12 @@
 		@for ($i = 0; $i < count($materia); $i++)
 			<td>
 				<span style="color: gray;">{{$materia[$i]}}</span> 
-				{{$tipo[ $d["MicrosoftOfficeSkills"][$i] ] }}
+				{{$tipo[ $d1["MicrosoftOfficeSkills"][$i] ] }}
 			</td>
 		@endfor
 		<td>
 			<span style="color: gray;">{{trans('application.typingproficiency')}}</span>	
-			{{$d["typingproficiency"]??""}}
+			{{$d1["typingproficiency"]??""}}
 		</td>
 	</tr>
 </table>
@@ -286,7 +286,7 @@
 		@for ($i = 1; $i < 3; $i++)
 			<td width="200">	
 				@foreach ($items as $item)
-					<span style="color: gray;">{{trans('application.'.$item)}}:</span> {{$d["reference".$i][$item]??""}} <br>
+					<span style="color: gray;">{{trans('application.'.$item)}}:</span> {{$d1["reference".$i][$item]??""}} <br>
 				@endforeach
 			</td>
 		@endfor
@@ -298,7 +298,7 @@
  <p style="text-align: justify; border: 1px solid black; color:black; padding: 10px; resize: both; overflow: auto;">
  	<span style="color: gray;">{{trans('application.applicationspace')}}.</span> <br><br>
  	
- 	{{$d["applicationspace"]??""}}
+ 	{{$d1["applicationspace"]??""}}
  	
  </p>
 
@@ -313,23 +313,23 @@
 			<label >{{trans('application.MilitaryService')}}</label>
 			<div class="form-check form-check-inline">
 				<label class="" style="font-size: 0.8em;"> {{trans('application.yes')}} </label>	
-				<input class="" type="radio" name="pag[MilitaryService]" id="inlineRadio1" value="1" style="font-size: 0.8em;" {{($d["MilitaryService"]??"")==1? "checked":""}} required>
+				<input class="" type="radio" name="pag[MilitaryService]" id="inlineRadio1" value="1" style="font-size: 0.8em;" {{($d1["MilitaryService"]??"")==1? "checked":""}} required>
 					  
 				<label class="" style="font-size: 0.8em;"> {{trans('application.no')}}</label>
-				<input class=" " type="radio" name="pag[MilitaryService]" id="inlineRadio2" value="0" {{($d["MilitaryService"]??"")==0? "checked":""}} required>
+				<input class=" " type="radio" name="pag[MilitaryService]" id="inlineRadio2" value="0" {{($d1["MilitaryService"]??"")==0? "checked":""}} required>
 			</div>	
 		</td>
 		<td width="100">	
 			<span style="color: gray;">{{trans('application.Branch')}}:</span>
-			  {{$d["militariBranch"]??""}}
+			  {{$d1["militariBranch"]??""}}
 		</td>
 	 	<td>	 		
 	 		<span style="color: gray;">{{trans('application.from')}}:</span>
-			 {{$d["militariFrom"]??""}}
+			 {{$d1["militariFrom"]??""}}
 	 	</td>
 	 	<td>	 		
 	 		<span style="color: gray;">{{trans('application.to')}}:</span>
-			 {{$d["militariTo"]??""}}
+			 {{$d1["militariTo"]??""}}
 	 	</td>
 	 </tr>
 </table>	
@@ -342,7 +342,7 @@
 	</p>
 </div>
 
-<?php $ciclo=isset($d["Employer"])?count($d["Employer"])-1:1 ?>
+<?php $ciclo=isset($d1["Employer"])?count($d1["Employer"]):1 ?>
 	 
 @for ($i = 0; $i < $ciclo ; $i++)
 	
@@ -352,51 +352,51 @@
 		@endif
 		<tr>
 			<td width='100'>
-			{{$d["Employer"][$i]??""}}
+			{{$d1["Employer"][$i]??""}}
 			<br><span>{{trans('application.Employer')}}</span>
 			</td>
 			<td>
-				 {{$d["EmployerTelephone"][$i]??""}}
+				 {{$d1["EmployerTelephone"][$i]??""}}
 				 <br><span>{{trans('application.telephone')}}</span>	
 			</td>
 			<td width="200">
-				    {{($d["Maycontactemployer"][$i]??"")==1? trans('application.yes'):""}}
-					{{($d["Maycontactemployer"][$i]??"")=="0"? trans('application.no'):""}}
+				    {{($d1["Maycontactemployer"][$i]??"")==1? trans('application.yes'):""}}
+					{{($d1["Maycontactemployer"][$i]??"")=="0"? trans('application.no'):""}}
 				 
 				<br><span>{{trans('application.Maycontactemployer')}}</span>	
 			</td>
 			<td>
-				{{$d["Salary"][$i]??""}} <br>
+				{{$d1["Salary"][$i]??""}} <br>
 				<span>{{trans('application.Salary')}}</span>
 			</td>
 		</tr>
 		<tr> <td>-</td></tr>
 		<tr>
 			<td colspan='2'>
-				{{$d["EmployerAddress"][$i]??""}} <br>
+				{{$d1["EmployerAddress"][$i]??""}} <br>
 				<span>{{trans('application.address')}}</span>
 			</td>
 			<td>
-				{{$d["EmployerTitle"][$i]??""}} <br>
+				{{$d1["EmployerTitle"][$i]??""}} <br>
 				<span>{{trans('application.JobTitle')}}</span>
 			</td>
 			<td>
-				{{$d["EmployerSupervisor"][$i]??""}} <br>
+				{{$d1["EmployerSupervisor"][$i]??""}} <br>
 				<span>{{trans('application.Supervisor')}}</span>
 			</td>
 		</tr>
 		<tr> <td></td><td>-</td><td></td></tr>
 		<tr>
 			<td colspan='2'>
-				{{$d["Reasonleaving"][$i]??""}} <br>
+				{{$d1["Reasonleaving"][$i]??""}} <br>
 				<span>{{trans('application.Reasonleaving')}}</span>
 			</td>
 			<td>
-				{{$d["EmploymentDates"][$i]??""}} <br>
+				{{$d1["EmploymentDates"][$i]??""}} <br>
 				<span>{{trans('application.EmploymentDates')}}</span>
 			</td>
 			<td>
-				{{$d["EmployerTo"][$i]??""}} <br>
+				{{$d1["EmployerTo"][$i]??""}} <br>
 				<span>{{trans('application.to')}}</span>
 			</td>
 		</tr>
@@ -404,5 +404,42 @@
 	<br><br>		
 @endfor
 
+<hr>	
+
+@include("certifications.certificationsPDF")
+
+<hr>	
+<table>
+	<tr>
+		<td><img style="max-width: 100px;" src="./assets/img/nhhsLogo.jpg"></td>
+		<td style="text-align: center;" width="400">
+		<h3>Neighborhood Home Health Services, Inc.</h3>
+		</td>		
+	</tr>
+</table>
+@include("sheet.information")
+
+<hr>	
+
+@include("release.autorizationPDF")
+
+  <script src="{{asset('assets/js/core/jquery.min.js')}}" type="text/javascript"></script>
+<script type="text/javascript">
+
+$('body').on('click', '#addTrabajo', function()
+      {
+           no=$(".yesno").length+1;      
+            $.get('/AddJob', "indice="+no, function(subpage){ 
+              $("#trabajo").append(subpage);
+            }).fail(function() {
+                 console.log('Error en carga de Datos');
+            });
+      });
+
+$('body').on('click', '.fa-trash', function()
+      {
+           $(this).parent().empty();
+     });      	
+</script>
 
 
