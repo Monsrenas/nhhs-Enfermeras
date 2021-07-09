@@ -3,6 +3,7 @@
 /public/storage
 /storage/*.key
 /vendor
+/var/www/html/nhhs/resources/views/autenticacion/Funciones_login.blade.php
 .env
 .env.backup
 .phpunit.result.cache
